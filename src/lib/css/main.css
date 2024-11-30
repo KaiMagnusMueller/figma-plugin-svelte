@@ -1,0 +1,240 @@
+body {
+	display: flex;
+}
+
+p {
+	margin-block: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin-block-end: 0;
+	margin-block-start: 0;
+	font-weight: var(--font-weight-bold);
+	font-size: var(--font-size-xsmall);
+	line-height: var(--font-line-height);
+}
+
+.heading__title {
+	font-size: var(--font-size-large);
+	font-weight: var(--font-weight-semibold);
+	padding-inline: 0.5rem;
+}
+
+.heading__section {
+	font-size: var(--font-size-xsmall);
+	font-weight: var(--font-weight-bold);
+	line-height: var(--font-line-height);
+	margin-block-end: 0;
+	margin-block-start: 0;
+}
+
+table {
+	border-collapse: collapse;
+	font-size: var(--font-size-xsmall);
+}
+
+th,
+td {
+	border: 1px solid var(--figma-color-border);
+	overflow: hidden;
+	min-width: 100px;
+}
+
+thead {
+	/* position: sticky;
+top: 0; */
+	border-block-start: 1px solid var(--figma-color-border);
+	background-color: var(--figma-color-bg);
+}
+
+th:first-of-type {
+	border-top-left-radius: var(--border-radius-large);
+}
+
+/* Minimal button styles for trying out things */
+button.prototype {
+	appearance: none;
+	padding: 0.5rem 0.75rem;
+	border: none;
+	border-radius: var(--border-radius-large);
+	color: inherit;
+	font-size: var(--font-size-xsmall);
+	text-align: left;
+	background-color: var(--figma-color-bg);
+	line-height: 1rem;
+}
+
+button.prototype:not([disabled]):hover {
+	background-color: var(--figma-color-bg-hover);
+}
+
+.prototype.small {
+	padding: 0.25rem 0.5rem;
+}
+
+menu,
+ul,
+li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.line-clamp-3 {
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 3;
+	line-clamp: 3;
+	display: -webkit-box;
+	overflow: hidden;
+	word-break: break-all;
+}
+
+.line-clamp-2 {
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	line-clamp: 2;
+	display: -webkit-box;
+	overflow: hidden;
+	word-break: break-all;
+}
+
+.line-clamp {
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 1;
+	line-clamp: 1;
+	display: -webkit-box;
+	overflow: hidden;
+	word-break: break-all;
+}
+
+.pointer-none {
+	pointer-events: none;
+}
+
+.horizontal-group {
+	gap: 0.5rem;
+	display: flex;
+}
+
+.nested-flex-group {
+	gap: inherit;
+	display: inherit;
+	justify-content: initial;
+	align-items: inherit;
+}
+
+.gap-025 {
+	gap: 0.25rem;
+}
+
+.gap-h-025 {
+	column-gap: 0.25rem;
+}
+
+.gap-v-025 {
+	row-gap: 0.25rem;
+}
+
+.gap-h-05 {
+	column-gap: 0.5rem;
+}
+
+.gap-v-05 {
+	row-gap: 0.5rem;
+}
+
+.width-full {
+	width: 100%;
+}
+
+.pd-i-05 {
+	padding-inline: 0.5rem;
+}
+
+.markdown * {
+	color: var(--figma-color-text);
+}
+
+.markdown a {
+	color: var(--figma-color-text-brand);
+}
+
+.markdown h1 {
+	font-weight: var(--font-weight-bold);
+	font-size: 16px;
+}
+
+.markdown h2 {
+	font-weight: var(--font-weight-bold);
+	font-size: var(--font-size-xlarge);
+}
+
+.markdown h3 {
+	font-weight: var(--font-weight-bold);
+	font-size: var(--font-size-large);
+}
+
+.markdown p {
+	font-weight: var(--font-weight-normal);
+	font-size: var(--font-size-small);
+	line-height: var(--font-line-height);
+}
+
+:root {
+	--elevation-100-canvas: 0px 0px 0.5px rgba(0, 0, 0, 0.3), 0px 1px 3px rgba(0, 0, 0, 0.15);
+	--elevation-200-canvas: 0px 0px 0.5px rgba(0, 0, 0, 0.18), 0px 3px 8px rgba(0, 0, 0, 0.1),
+		0px 1px 3px rgba(0, 0, 0, 0.1);
+	--elevation-300-tooltip: 0px 0px 0.5px rgba(0, 0, 0, 0.15), 0px 5px 12px rgba(0, 0, 0, 0.13),
+		0px 1px 3px rgba(0, 0, 0, 0.1);
+	--elevation-400-menu-panel: 0px 0px 0.5px rgba(0, 0, 0, 0.12), 0px 10px 16px rgba(0, 0, 0, 0.12),
+		0px 2px 5px rgba(0, 0, 0, 0.15);
+	--elevation-500-modal-window: 0px 0px 0.5px rgba(0, 0, 0, 0.08),
+		0px 10px 24px rgba(0, 0, 0, 0.18), 0px 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+[popover] {
+	color: inherit;
+	background: inherit;
+}
+
+.popover {
+	padding: 0rem;
+	width: 14rem;
+	height: calc(100% - 2rem);
+	box-shadow: var(--elevation-500-modal-window);
+	border: none;
+	border-radius: var(--border-radius-small);
+}
+
+.popover__wrapper {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	background: var(--figma-color-bg);
+
+	.popover__content-wrapper {
+		overflow-y: scroll;
+		position: relative;
+		width: 100%;
+		height: 100%;
+	}
+
+	.popover__section > header {
+		position: sticky;
+		top: 0;
+	}
+
+	.popover__section {
+		position: absolute;
+		inset: 0;
+	}
+
+	.popover__section-content {
+		padding: 0.5rem 0.5rem;
+	}
+}

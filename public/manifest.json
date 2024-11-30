@@ -1,0 +1,13 @@
+{
+  "name": "Figma Example Plugin",
+  "id": "1427826413234709019",
+  "api": "1.0.0",
+  "main": "code.js",
+  "capabilities": [],
+  "enableProposedApi": false,
+  "documentAccess": "dynamic-page",
+  "editorType": [
+    "figma"
+  ],
+  "ui": "index.html"
+}
