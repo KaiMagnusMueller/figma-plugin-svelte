@@ -18,6 +18,8 @@
 		"cssnano": "^7.0.6",
 		"mdsvex": "^0.12.3",
 		"postcss": "^8.4.45",
+		"prettier-plugin-css-order": "^2.1.2",
+		"prettier-plugin-svelte": "^3.3.2",
 		"rollup": "^4.21.2",
 		"rollup-plugin-html-bundle": "*",
 		"rollup-plugin-livereload": "^2.0.5",

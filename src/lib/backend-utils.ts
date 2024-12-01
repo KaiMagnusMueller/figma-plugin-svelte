@@ -39,6 +39,20 @@ export async function getNodesById(nodeIds: string[]): Promise<SceneNode[]> {
 	return nodesToSelect;
 }
 
+/**
+ * Retrieves the ultimate ancestor node of the given current node.
+ *
+ * @param {BaseNode} currentNode - The current node to find the ultimate ancestor for.
+ * @returns {BaseNode} The ultimate ancestor node of the current node.
+ */
+export function getAncestorNode(currentNode: BaseNode) {
+	let ultimateAncestor = currentNode;
+	while (ultimateAncestor.parent.type !== 'PAGE') {
+		ultimateAncestor = ultimateAncestor.parent;
+	}
+	return ultimateAncestor;
+}
+
 export function copyNode(node: BaseNode): SNode {
 	return {
 		id: node.id,
